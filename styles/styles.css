@@ -1,0 +1,588 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+  color: rgb(62, 62, 62);
+}
+p {
+  color: rgb(153, 153, 153);
+}
+
+ul {
+  list-style-type: none;
+}
+/* ----------HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7%;
+  padding: 1% 5%;
+  background-color: inherit;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transition: 0.3s ease-in-out;
+  color: #fff;
+}
+
+.nav-active {
+  background-color: #fff;
+  color: black;
+  box-shadow: 1px 1px 10px 1px rgb(182, 171, 171);
+}
+nav a {
+  text-decoration: none;
+  transition: 0.1s;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: aquamarine;
+}
+
+header .logo img {
+  width: 150px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+}
+header .fixed {
+  color: inherit;
+}
+
+/* ----------------MAIN */
+#home {
+  text-align: center;
+}
+.curly-words {
+  font-family: "Arizonia", serif;
+  color: rgb(38, 146, 11);
+  word-spacing: 5px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+#home .slide img {
+  width: 100%;
+  height: 860px;
+  vertical-align: center;
+  object-fit: cover;
+}
+#home .bg {
+  width: 100%;
+  height: 860px;
+  background-color: rgba(20, 9, 9, 0.295);
+  position: absolute;
+}
+
+#home .slide .text {
+  color: #fff;
+  position: absolute;
+  top: 30%;
+  width: 100%;
+}
+.slide .text h1,
+.slide .text p {
+  width: 700px;
+  margin: 0 auto 50px auto;
+  color: #fff;
+}
+.slide .text h1 {
+  font-size: 50px;
+}
+.slide .text .call-btn {
+  outline: none;
+  border: none;
+  padding: 20px 40px;
+  background-color: rgb(216, 42, 77);
+  color: #fff;
+  font-size: 17px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 150px !important;
+  font-weight: 600;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.slide .text .call-btn:hover {
+  background-color: rgb(214, 95, 119);
+}
+
+/* ------ why choose us  */
+
+#why-choose-us {
+  display: flex;
+  padding: 5%;
+}
+.choose-images ul {
+  display: flex;
+}
+
+.choose-images ul li img {
+  width: 90%;
+}
+.section-title {
+  font-size: 40px;
+}
+.choose-us-info ul {
+  padding-left: 0 !important;
+}
+.choose-us-info li {
+  display: flex;
+}
+
+.choose-us-info span {
+  font-size: 30px;
+  margin-right: 60px;
+  padding: 15px;
+  font-size: 20px;
+}
+.choose-us-info h3 {
+  margin: 0;
+}
+
+#top-deals {
+  text-align: center;
+}
+
+.cards {
+  background-color: rgb(246, 255, 255);
+  display: grid;
+  grid-template-columns: 20rem 20rem 20rem;
+  gap: 55px !important;
+  justify-content: center;
+  padding: 100px 0;
+}
+.card {
+  background-color: #fff;
+  box-shadow: 1px 1px 10px 1px rgb(245, 239, 239);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card-img img {
+  width: 20rem;
+  border-radius: 10px;
+  height: 17rem;
+  transition: 0.3s;
+}
+.card-img img:hover {
+  filter: brightness(50%);
+}
+
+.card .price {
+  background-color: rgb(217, 153, 63);
+  display: inline-block;
+  color: #fff;
+  padding: 5px 25px;
+  border-radius: 50px;
+  letter-spacing: 5px;
+}
+.location-name {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+#services {
+  padding: 5%;
+}
+.services-cards {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 20px;
+  padding-left: 0;
+}
+
+#services .card {
+  text-align: center;
+  width: 16rem;
+  padding: 70px 0 40px 0;
+  transition: 0.3s;
+}
+#services .card:hover {
+  background-color: rgba(241, 248, 246, 0.438);
+}
+
+span {
+  background-color: rgb(217, 153, 63);
+  padding: 25px;
+  border-radius: 60%;
+  color: #fff;
+  font-size: 30px;
+}
+#services .card h3 {
+  margin-top: 55px;
+}
+
+#tour-gallery {
+  text-align: center;
+}
+.photos {
+  display: grid;
+  grid-template-columns: 25rem 25rem 25rem;
+  gap: 30px;
+  padding-left: 75px;
+}
+.photo {
+  width: 26rem;
+  height: 20rem;
+  position: relative;
+  display: inline-block;
+}
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  /* backface-visibility: hidden; */
+}
+
+.photo span {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  font-size: 60px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+}
+.photo-name {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  color: #fff;
+}
+.photo:hover img {
+  filter: brightness(60%) !important;
+}
+
+.photo:hover .photo-name,
+.photo:hover span {
+  opacity: 1;
+}
+
+#tour-gallery .modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(3, 2, 2); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.677); /* Black w/ opacity */
+}
+.modal-content {
+  position: relative;
+  height: 100vh;
+}
+.modal-content img {
+  margin-top: 5%;
+  width: 50rem;
+  height: 35rem;
+}
+
+.modal-content {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.modal-btns {
+  position: absolute;
+  cursor: pointer;
+  color: rgb(214, 95, 119);
+  font-size: 50px;
+}
+
+.close {
+  top: -10%;
+  right: 20px;
+}
+
+.statistics {
+  width: 100%;
+  height: 100%;
+  margin: 30px 0;
+}
+.statistics-content {
+  display: flex;
+  background-image: url("/images/travel-concept-with-landmarks.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-color: grey;
+  background-blend-mode: multiply;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+.statistics-content li {
+  width: 17rem;
+  height: 15rem;
+  background-color: rgba(246, 239, 239, 0.942);
+  padding-top: 20px;
+}
+.statistics-content li span {
+  background-color: transparent;
+  color: black;
+}
+.statistics-content li h1 {
+  color: rgb(214, 95, 119);
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 50px;
+  letter-spacing: 6px;
+  font-weight: 600;
+}
+.statistics-content li .curly-words {
+  color: rgb(32, 29, 29);
+  margin-top: 10px;
+}
+.dot {
+  font-size: 10px;
+  display: inline-block;
+  padding: 0;
+}
+.dot i {
+  color: rgb(214, 95, 119);
+}
+.partners {
+  height: 18rem;
+  overflow: hidden;
+}
+.partners ul {
+  height: 100%;
+  background-color: rgb(232, 236, 231);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.partners li {
+  border: solid rgb(141, 130, 130) 1px;
+}
+#testimonials {
+  height: 100%;
+  /* width: 100%; */
+  background-image: url("/images/places/maldives-island.jpg");
+  min-height: 70vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-color: grey;
+  background-blend-mode: multiply;
+  padding: 100px 150px;
+  overflow: hidden !important;
+}
+
+.testimonials-headings h3 {
+  margin: 0 10px;
+  color: rgb(216, 42, 77);
+}
+
+#testimonials h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin: 0;
+}
+
+#testimonials ul {
+  display: flex;
+  gap: 20px;
+}
+#testimonials ul li {
+  width: 15rem;
+  padding: 50px;
+  color: #fff;
+  text-align: center;
+  transition: 0.3s all;
+}
+.active {
+  background-color: bisque;
+}
+#testimonials li img {
+  width: 10rem;
+}
+#testimonials p {
+  color: #fff;
+}
+#testimonials li span {
+  background-color: transparent;
+  font-size: 15px;
+  color: rgb(165, 237, 22);
+}
+#contact-us {
+  text-align: center;
+}
+#contact-us h1 {
+  font-size: 40px;
+}
+#contact-us ul {
+  display: flex;
+  gap: 120px;
+  justify-content: center;
+}
+#contact-us li p {
+  color: black;
+  display: inline-block;
+}
+#contact-us span {
+  text-align: center;
+  padding: 20px 25px;
+  font-size: 25px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.map-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 50px 100px;
+}
+
+#map {
+  height: 60vh;
+  width: 100%;
+}
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  background-color: rgba(246, 240, 234, 0.7);
+  width: 100%;
+  padding-top: 40px;
+}
+input {
+  height: 30px;
+  width: 240px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  padding-left: 10px;
+}
+input:nth-child(1) {
+  margin-right: 10px;
+  margin-bottom: 40px;
+}
+input:nth-child(3) {
+  display: block;
+  width: 82%;
+  margin: 0 auto 40px auto;
+}
+textarea {
+  font-family: inherit;
+  font-size: 17px;
+  margin: 0 auto 40px auto;
+  display: block;
+}
+
+form button {
+  padding: 15px 35px;
+  position: absolute;
+  left: 54.9%;
+  cursor: pointer;
+  background-color: rgb(217, 153, 63);
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: rgb(43, 43, 136);
+}
+footer {
+  background-color: rgb(19, 19, 97);
+  color: #fff;
+  padding: 50px 150px;
+}
+hr.first {
+  width: 200px !important;
+  border: 3px solid rgb(217, 153, 63);
+  margin-left: 0px;
+}
+footer ul {
+  display: flex;
+}
+
+.socials {
+  text-align: center;
+}
+.copyright {
+  font-size: 10px;
+}
+.socials i {
+  font-size: 35px;
+  margin: 10px;
+  transition: 0.3s;
+}
+.socials a:hover {
+  color: blueviolet;
+}
+.menu-bar {
+  display: none;
+  font-size: 30px;
+  padding: 10px 20px;
+  border-radius: 30%;
+  color: #fff;
+  background-color: rgb(216, 42, 77);
+}
+
+@media (max-width: 790px) {
+  header nav {
+    display: none;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+}
