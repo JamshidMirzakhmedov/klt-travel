@@ -325,12 +325,14 @@
         </ul>
         <div class="map-form">
           <div id="map"></div>
-          <form action="submit">
-            <input type="text" name="name" placeholder="Name" />
-            <input type="email" name="email" placeholder="Email" />
-            <input type="text" name="subject" placeholder="Subject" />
+          <form
+            method="post"
+            action="https://api.sheetmonkey.io/form/v38ZGj1Fj7VmcC5HM39WJy">
+            <input type="text" name="Name" placeholder="Name" />
+            <input type="email" name="Email" placeholder="Email" />
+            <input type="text" name="Subject" placeholder="Subject" />
             <textarea
-              name="message"
+              name="Message"
               id="message"
               cols="34"
               rows="7"
