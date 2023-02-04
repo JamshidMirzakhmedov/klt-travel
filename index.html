@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>KLT Travel</title>
     <link
@@ -35,9 +33,19 @@
             alt="klt-logo"
         /></a>
       </div>
-      <div class="hamburger-menu">
+      <div class="menu">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="fixed">Bosh Sahifa</a></li>
+          <li><a href="#top-deals" class="fixed">Sayohat To'plamlar </a></li>
+          <li><a href="#services" class="fixed">Xizmatlar</a></li>
+          <li><a href="#tour-gallery" class="fixed">Galleriya</a></li>
+          <li><a href="#contact-us" class="fixed">Bog'lanish</a></li>
+        </ul>
+      </div>
+      <div class="hamburger-menu" id="hamburger-menu">
         <a href="#" class="menu-bar"><i class="fa-solid fa-bars"></i></a>
       </div>
+
       <nav>
         <ul>
           <li><a href="#home" class="fixed">Bosh Sahifa</a></li>
@@ -48,6 +56,7 @@
         </ul>
       </nav>
     </header>
+
     <main>
       <section id="home">
         <div class="bg"></div>
@@ -334,7 +343,7 @@
             <textarea
               name="Message"
               id="message"
-              cols="34"
+              cols="59"
               rows="7"
               placeholder="Your Message"></textarea>
             <button type="submit">Submit Message</button>

@@ -140,3 +140,10 @@ function initMap() {
 }
 
 window.initMap = initMap;
+
+const hamburger = document.querySelector(".menu-bar");
+const menu = document.querySelector(".menu");
+
+hamburger.addEventListener("click", () => {
+  menu.classList.toggle("open");
+});
