@@ -573,7 +573,7 @@ footer ul {
   justify-content: center;
   align-items: center;
   width: 800px;
-  height: 30vh;
+  height: 55vh;
   margin: 0 auto;
   background-color: rgb(48, 48, 138);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -584,10 +584,14 @@ footer ul {
   transition: all 0.3s ease;
   border-radius: 5%;
 }
-.menu:after {
-  content: "";
-  display: table;
-  clear: both;
+.menu span {
+  font-size: 30px;
+  padding: 10px;
+  background-color: transparent;
+  color: rgb(223, 26, 26);
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .menu-bar {
@@ -628,18 +632,25 @@ footer ul {
 }
 
 @media only screen and (max-width: 768px) {
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+  }
   header nav {
     display: none;
   }
   .menu-bar {
     display: block;
+    margin-right: 10px;
   }
 
   header {
-    height: 2%;
-    justify-content: baseline;
+    height: 10%;
+    justify-content: space-between;
     padding: 0;
-    width: 327px;
+    width: 390px;
   }
   header .logo img {
     width: 5rem;
@@ -653,5 +664,135 @@ footer ul {
   }
   .slide .text h1 {
     font-size: 30px;
+  }
+  #home .slide .text {
+    top: 20%;
+  }
+  .slide .text h1,
+  .slide .text p {
+    width: 400px;
+  }
+  .slide .text .call-btn {
+    padding: 1rem;
+    font-size: 12px;
+  }
+  #why-choose-us,
+  .choose-images ul,
+  .cards,
+  .services-cards,
+  .photos,
+  .statistics-content,
+  #testimonials ul,
+  #contact-us ul {
+    display: block;
+  }
+  .destination-gallery .card {
+    height: 400px;
+    margin-top: 20px;
+  }
+  #services .card {
+    width: auto;
+  }
+  .photos {
+    padding: 5px;
+  }
+  .photo {
+    width: 20rem;
+  }
+  #tour-gallery .modal {
+    width: 390px;
+  }
+  .modal-content img {
+    width: 24rem;
+    height: 25rem;
+  }
+  .statistics {
+    margin: 0;
+  }
+
+  .statistics-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .statistics-content li .curly-words {
+    font-size: 2rem;
+  }
+  .statistics-content li {
+    margin-top: 10px;
+    width: 19.5rem;
+  }
+  .partners {
+    height: 150px;
+  }
+  .partners li img {
+    width: 50px;
+  }
+
+  #testimonials {
+    padding: 10px;
+  }
+  #testimonials h1 {
+    font-size: 2rem;
+  }
+  .curly-words {
+    font-size: 1rem;
+  }
+  #testimonials ul {
+    padding: 15px;
+  }
+  #contact-us {
+    margin-bottom: 50px;
+  }
+  #contact-us h1 {
+    font-size: 2rem;
+  }
+  #contact-us li {
+    margin-top: 35px;
+  }
+
+  #contact-us li p {
+    display: block;
+    margin-top: 25px;
+  }
+  .map-form {
+    display: block;
+    padding: 20px;
+  }
+  .map-form form {
+    margin-top: 40px;
+    padding: 170px auto;
+    height: 550px;
+  }
+  .map-form form input {
+    margin-bottom: 55px;
+  }
+  .map-form form input {
+    width: 300px;
+  }
+  .map-form form input:nth-child(3) {
+    margin: 0 auto 55px auto;
+  }
+  .map-form form input:nth-child(1) {
+    margin-right: auto;
+  }
+  .map-form form button {
+    left: 10%;
+    padding: 10px 15px;
+  }
+  footer {
+    padding: 10px 0;
+    overflow: hidden !important;
+  }
+  footer ul {
+    padding: 5px;
+    margin: 0;
+  }
+  footer p {
+    padding: 5px;
+    margin: 0;
+    width: auto;
+  }
+  hr {
+    width: 100px;
   }
 }

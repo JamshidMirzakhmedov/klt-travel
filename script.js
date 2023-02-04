@@ -143,7 +143,12 @@ window.initMap = initMap;
 
 const hamburger = document.querySelector(".menu-bar");
 const menu = document.querySelector(".menu");
+const closeBar = document.querySelector(".close-bar");
 
 hamburger.addEventListener("click", () => {
   menu.classList.toggle("open");
+});
+
+closeBar.addEventListener("click", () => {
+  menu.classList.remove("open");
 });
