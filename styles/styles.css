@@ -522,6 +522,7 @@ textarea {
   font-size: 17px;
   margin: 0 auto 40px auto;
   display: block;
+  width: 82%;
 }
 
 form button {
@@ -774,6 +775,9 @@ footer ul {
   }
   .map-form form input:nth-child(1) {
     margin-right: auto;
+  }
+  textarea {
+    width: 50%;
   }
   .map-form form button {
     left: 10%;
