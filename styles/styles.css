@@ -70,7 +70,7 @@ header .fixed {
 
 #home .slide img {
   width: 100%;
-  height: 53rem;
+  height: 53rem !important;
   vertical-align: center;
   object-fit: cover;
 }
@@ -151,15 +151,26 @@ header .fixed {
   text-align: center;
 }
 
-.cards {
+/* -------- TRAVEL PACKAGES */
+/* 
+.destination-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  position: relative;
+} */
+
+.travel-package-cards {
   background-color: rgb(246, 255, 255);
   display: grid;
-  grid-template-columns: 20rem 20rem 20rem;
+  grid-template-columns: 21rem 21rem 21rem;
   gap: 55px !important;
   justify-content: center;
-  padding: 100px 0;
+  padding: 10px 0;
 }
-.card {
+.travel-package-card {
   background-color: #fff;
   box-shadow: 1px 1px 10px 1px rgb(245, 239, 239);
   border-radius: 10px;
@@ -167,16 +178,16 @@ header .fixed {
 }
 
 .card-img img {
-  width: 20rem;
+  width: 21rem;
   border-radius: 10px;
-  height: 17rem;
+  height: 20rem;
   transition: 0.3s;
 }
 .card-img img:hover {
   filter: brightness(50%);
 }
 
-.card .price {
+.travel-package-card .price {
   background-color: rgb(217, 153, 63);
   display: inline-block;
   color: #fff;
@@ -184,9 +195,48 @@ header .fixed {
   border-radius: 50px;
   letter-spacing: 5px;
 }
+
 .location-name {
   margin: 0;
   margin-bottom: 20px;
+}
+
+.travel-package-model {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  position: fixed; /* Stay in place */
+  z-index: 9; /* Sit on top */
+  padding: 20px;
+  left: 35%;
+  top: 40%;
+  width: 30%; /* Full width */
+  overflow: hidden; /* Enable scroll if needed */
+}
+
+.package-model-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+.close-travel {
+  position: absolute;
+  cursor: pointer;
+  color: rgb(214, 95, 119);
+  font-size: 30px;
+  top: 0;
+  right: 10px;
+}
+
+.hidden {
+  display: none;
 }
 
 #services {

@@ -1,6 +1,6 @@
 const navbar = document.querySelector("header");
 const navLists = document.querySelectorAll("header li a");
-const cards = document.querySelector(".cards");
+const cards = document.querySelector(".travel-package-cards");
 const photos = document.querySelector(".photos");
 
 window.onscroll = () => {
@@ -31,7 +31,7 @@ function showSlides() {
 
 for (let i = 0; i < destinations.length; i++) {
   const card = document.createElement("li");
-  card.classList.add("card");
+  card.classList.add("travel-package-card");
   card.innerHTML = `<div class="card-img">
     <img src=${destinations[i].imgUrl} alt=${destinations[i].alt} />
   </div>
@@ -40,6 +40,30 @@ for (let i = 0; i < destinations.length; i++) {
     <i class="fa-solid fa-location-dot"></i> ${destinations[i].name}
   </h4>`;
   cards.append(card);
+}
+
+const travelPackageCards = document.querySelectorAll(".travel-package-card");
+const travelModel = document.querySelector(".travel-package-model");
+const travelModelOverlay = document.querySelector(".package-model-overlay ");
+const closeTravelModelBtn = document.querySelector(".close-travel");
+const travelModelContent = document.querySelector(".travel-package-content");
+
+travelPackageCards.forEach(showPackageModel);
+
+function showPackageModel(btn, i) {
+  btn.addEventListener("click", () => {
+    travelModel.classList.remove("hidden");
+    travelModelOverlay.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+    travelModelContent.innerHTML = `${tourInfos[i]}`;
+  });
+}
+closeTravelModelBtn.addEventListener("click", closeTravelModel);
+travelModelOverlay.addEventListener("click", closeTravelModel);
+function closeTravelModel() {
+  travelModel.classList.add("hidden");
+  travelModelOverlay.classList.add("hidden");
+  document.body.style.overflow = "auto";
 }
 
 for (let i = 0; i < destinations.length; i++) {
