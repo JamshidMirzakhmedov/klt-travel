@@ -761,15 +761,24 @@ footer ul {
   .travel-package-cards {
     grid-template-columns: auto;
   }
+
+  .travel-package-model {
+    left: 15%;
+    top: 25%;
+    width: 60%;
+    padding: 40px;
+  }
+  .travel-package-content {
+    padding: 0;
+  }
   .photos {
     padding: 5px;
   }
   .photo {
     width: 20rem;
+    margin: 10px;
   }
-  #tour-gallery .modal {
-    width: 390px;
-  }
+
   .modal-content img {
     width: 24rem;
     height: 25rem;
@@ -787,7 +796,7 @@ footer ul {
   }
   .statistics-content li {
     margin-top: 10px;
-    width: 19.5rem;
+    width: 90%;
   }
   .partners {
     height: 150px;
@@ -801,12 +810,14 @@ footer ul {
   }
   #testimonials h1 {
     font-size: 2rem;
+    text-align: center;
   }
   .curly-words {
     font-size: 1rem;
   }
   #testimonials ul {
-    padding: 15px;
+    padding-left: 26px;
+    text-align: center;
   }
   #contact-us {
     margin-bottom: 50px;
