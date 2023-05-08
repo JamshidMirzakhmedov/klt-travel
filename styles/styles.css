@@ -695,7 +695,7 @@ footer ul {
   padding: 10px 15px;
   border-radius: 5px;
 }
-
+/* -------------- MEDIA QUERY */
 @media only screen and (max-width: 468px) {
   body {
     box-sizing: border-box;
@@ -757,6 +757,9 @@ footer ul {
   }
   #services .card {
     width: auto;
+  }
+  .travel-package-cards {
+    grid-template-columns: auto;
   }
   .photos {
     padding: 5px;
