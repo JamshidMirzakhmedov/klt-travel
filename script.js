@@ -197,6 +197,6 @@ hamburger.addEventListener("click", () => {
   menu.classList.toggle("open");
 });
 
-// closeBar.addEventListener("click", () => {
-//   menu.classList.remove("open");
-// });
+closeBar.addEventListener("click", () => {
+  menu.classList.remove("open");
+});
