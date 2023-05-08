@@ -2,7 +2,6 @@ const navbar = document.querySelector("header");
 const navLists = document.querySelectorAll("header li a");
 const cards = document.querySelector(".travel-package-cards");
 const photos = document.querySelector(".photos");
-
 window.onscroll = () => {
   if (window.scrollY > 10) {
     navbar.classList.add("nav-active");
@@ -10,6 +9,31 @@ window.onscroll = () => {
     navbar.classList.remove("nav-active");
   }
 };
+
+// language select
+
+// const userLang = navigator.language || navigator.userLanguage;
+// if (userLang.startsWith("en")) {
+//   window.location.href = "index.html";
+// } else if (userLang.startsWith("ru")) {
+//   window.location.href = "index-ru.html";
+// }
+
+// localStorage.setItem("userLang", userLang);
+
+const languageSelect = document.getElementById("language-select");
+
+// Set the default language based on the user's browser language
+const userLang = navigator.language || navigator.userLanguage;
+if (userLang.startsWith("ru")) {
+  languageSelect.value = "index-ru.html";
+}
+
+// Listen for changes to the language selector
+languageSelect.addEventListener("change", function (event) {
+  const newUrl = event.target.value;
+  window.location.href = newUrl;
+});
 
 let slideIndex = 0;
 showSlides();
@@ -35,7 +59,7 @@ for (let i = 0; i < destinations.length; i++) {
   card.innerHTML = `<div class="card-img">
     <img src=${destinations[i].imgUrl} alt=${destinations[i].alt} />
   </div>
-  <p class="price">$ ${destinations[i].price} </p>
+  
   <h4 class="location-name">
     <i class="fa-solid fa-location-dot"></i> ${destinations[i].name}
   </h4>`;
@@ -173,6 +197,6 @@ hamburger.addEventListener("click", () => {
   menu.classList.toggle("open");
 });
 
-closeBar.addEventListener("click", () => {
-  menu.classList.remove("open");
-});
+// closeBar.addEventListener("click", () => {
+//   menu.classList.remove("open");
+// });

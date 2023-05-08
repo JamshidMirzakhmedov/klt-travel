@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>OPAL Travel</title>
+    <link
+      rel="shortcut icon"
+      href="images/icons/OPAL.png"
+      type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arizonia&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="db.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="images/icons/OPAL.png" alt="opal-logo"
+        /></a>
+      </div>
+      <!-- <div class="menu">
+        <ul class="nav-links" id="nav-links">
+          <span class="close-bar"
+            ><i class="fa-solid fa-circle-xmark"> </i
+          ></span>
+          <li><a href="#home" class="fixed">Bosh Sahifa</a></li>
+          <li><a href="#top-deals" class="fixed">Sayohat To'plamlar </a></li>
+          <li><a href="#services" class="fixed">Xizmatlar</a></li>
+          <li><a href="#tour-gallery" class="fixed">Galleriya</a></li>
+          <li><a href="#contact-us" class="fixed">Bog'lanish</a></li>
+          
+        </ul>
+      </div> -->
+      <div class="hamburger-menu" id="hamburger-menu">
+        <a href="#" class="menu-bar"><i class="fa-solid fa-bars"></i></a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#home" class="fixed">Bosh Sahifa</a></li>
+          <li><a href="#top-deals" class="fixed">Sayohat To'plamlar </a></li>
+          <li><a href="#services" class="fixed">Xizmatlar</a></li>
+          <li><a href="#tour-gallery" class="fixed">Galleriya</a></li>
+          <li><a href="#contact-us" class="fixed">Bog'lanish</a></li>
+          <select
+            name="language-selecet"
+            id="language-select"
+            onclick="setLanguagePreference(this.value);">
+            <option value="0">Выбор языка </option>
+            <option value="index.html">O'zbek</option>
+            <option value="index-ru.html">Русский </option>
+          </select>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <div class="bg"></div>
+        <div class="slide fade">
+          <img
+            src="images/places/K.jpg"
+            alt="AL Masjid Al Haram  Makkah picture" />
+          <div class="text">
+            <h3 class="curly-words animate__animated animate__bounce">
+              Welcome to OPAL Travel
+            </h3>
+            <h1 class="animate__animated animate__fadeInLeft">
+              Allohning Baytini biz bilan ziyorat qiling
+            </h1>
+            <p class="animate__animated animate__fadeInRight">
+              contact <br />
+              <i class="fa-solid fa-arrow-down down-arrow"></i>
+            </p>
+            <a href="tel:+998903439400" class="call-btn">Booking Now ➡</a>
+          </div>
+        </div>
+        <div class="slide fade">
+          <img
+            src="images/places/pexels-zukiman-mohamad-22804.jpg"
+            alt="Dubai picture" />
+          <div class="text">
+            <h3 class="curly-words animate__animated animate__fadeInDown">
+              Welcome to OPAL Travel
+            </h3>
+            <h1 class="animate__animated animate__fadeInLeft">
+              Dunyoning yangi qirralarini biz bilan kashf qiling
+            </h1>
+            <p class="animate__animated animate__fadeInRight">
+              Biz bilan hoziroq bog'laning
+              <br />
+              <i class="fa-solid fa-arrow-down down-arrow"></i>
+            </p>
+            <a href="tel:++998903439400" class="call-btn">Booking Now ➡</a>
+          </div>
+        </div>
+      </section>
+      <section id="why-choose-us">
+        <div class="choose-images">
+          <ul>
+            <li>
+              <img src="images/service/mountain-man.jpg" alt="mountain-man" />
+            </li>
+            <li><img src="images/service/paris.jpg" alt="paris" /></li>
+          </ul>
+        </div>
+        <div class="choose-us-info">
+          <h3 class="curly-words">Why Choose Us</h3>
+          <h1 class="section-title">Every Time We Provide The Best Service</h1>
+          <ul>
+            <li>
+              <div>
+                <span><i class="fa-solid fa-people-group"></i> </span>
+              </div>
+              <div class="txt">
+                <h3>Expert Team Member</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur et quam sollicitudin mi tincidunt faucibus
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span><i class="fa-solid fa-sack-dollar"></i> </span>
+              </div>
+              <div class="txt">
+                <h3>Save Money And Time</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur et quam sollicitudin mi tincidunt faucibus
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span> <i class="fa-solid fa-headset"></i> </span>
+              </div>
+              <div class="txt">
+                <h3>24/7 Support</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur et quam sollicitudin mi tincidunt faucibus
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="top-deals">
+        <h3 class="curly-words">Popular Destination</h3>
+        <h1 class="section-title">Travel Most Popular Place In The World</h1>
+        <div class="destination-gallery">
+          <div class="travel-package-model hidden">
+            <div class="close-travel">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+
+            <h3> Sizga ushbu safarda taklif qiladi: </h3>
+            <ul class="travel-package-content"> </ul>
+          </div>
+          <div class="package-model-overlay hidden"></div>
+          <ul class="travel-package-cards"></ul>
+        </div>
+      </section>
+      <section id="services">
+        <h3 class="curly-words">Services</h3>
+        <h1 class="section-title">What we offer for you</h1>
+        <ul class="services-cards">
+          <li class="card">
+            <span><i class="fa-solid fa-bed"></i></span>
+            <h3>Delux</h3>
+            <p>Lorem ipsum dolor sit amet consetetur sadipscing</p>
+          </li>
+          <li class="card">
+            <span><i class="fa-solid fa-utensils"></i></span>
+            <h3>Delicoius Food</h3>
+            <p>Lorem ipsum dolor sit amet consetetur sadipscing</p>
+          </li>
+          <li class="card">
+            <span><i class="fa-solid fa-taxi"></i></span>
+            <h3>Airport Taxi</h3>
+            <p>Lorem ipsum dolor sit amet consetetur sadipscing</p>
+          </li>
+          <li class="card">
+            <span><i class="fa-brands fa-xbox"></i></span>
+            <h3>Game Room</h3>
+            <p>Lorem ipsum dolor sit amet consetetur sadipscing</p>
+          </li>
+        </ul>
+      </section>
+      <section id="tour-gallery">
+        <div class="modal">
+          <div class="modal-content">
+            <div class="close modal-btns">
+              <i class="close-modal fa-solid fa-circle-xmark"></i>
+            </div>
+            <img
+              id="modal-photo"
+              src="images/places/pexels-haydan-assoendawy-5004002.jpg"
+              alt="" />
+          </div>
+        </div>
+        <h3 class="curly-words">Tour Gallery</h3>
+        <h1 class="section-title">Best Tourist's Shared Photos</h1>
+        <ul class="photos"></ul>
+      </section>
+      <div class="statistics">
+        <ul class="statistics-content">
+          <li>
+            <span><i class="fa-solid fa-users"></i></span>
+            <h1 id="nbr">324</h1>
+            <h3 class="curly-words">
+              Happy Customers
+              <span class="dot"><i class="fa-solid fa-circle"></i></span>
+            </h3>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-plane"></i></span>
+            <h1 id="nbr">236</h1>
+            <h3 class="curly-words">
+              Amazing Tours
+              <span class="dot"><i class="fa-solid fa-circle"></i></span>
+            </h3>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-handshake"></i></span>
+            <h1 id="nbr">267</h1>
+            <h3 class="curly-words">
+              In Business
+              <span class="dot"><i class="fa-solid fa-circle"></i></span>
+            </h3>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-headset"></i></span>
+            <h1 id="nbr">198</h1>
+            <h3 class="curly-words">
+              Support Cases
+              <span class="dot"><i class="fa-solid fa-circle"></i></span>
+            </h3>
+          </li>
+        </ul>
+      </div>
+      <div class="partners">
+        <ul>
+          <li><img src="/images/partners/1-2.jpg" alt="partners logo" /></li>
+          <li><img src="/images/partners/2-2.jpg" alt="partners logo" /></li>
+          <li><img src="/images/partners/3-2.jpg" alt="partners logo" /></li>
+          <li><img src="/images/partners/4-2.jpg" alt="partners logo" /></li>
+          <li><img src="/images/partners/5-2.jpg" alt="partners logo" /></li>
+        </ul>
+      </div>
+      <section id="testimonials">
+        <div class="testimonials-content">
+          <div class="testimonials-headings">
+            <h3 class="curly-words">Testimonials</h3>
+            <h1>What Our Happy Customers</h1>
+            <h1>Say About Us</h1>
+          </div>
+          <ul class="views-container">
+            <li class="views">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque consequuntur ipsa quisquam exercitationem molestiae
+              </p>
+              <div class="user-img">
+                <img
+                  src="/images/users/user1-removebg-preview.png"
+                  alt="user photo" />
+              </div>
+              <h2>Paula</h2>
+              <span class="rating-stars"
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ></span>
+            </li>
+            <li class="views">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque consequuntur ipsa quisquam exercitationem molestiae
+              </p>
+              <div class="user-img">
+                <img
+                  src="/images/users/user2-removebg-preview.png"
+                  alt="user photo" />
+              </div>
+              <h2>John</h2>
+              <span class="rating-stars"
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ></span>
+            </li>
+            <li class="views active">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque consequuntur ipsa quisquam exercitationem molestiae
+              </p>
+              <div class="user-img">
+                <img
+                  src="/images/users/user3-removebg-preview.png"
+                  alt="user photo" />
+              </div>
+              <h2>Anna</h2>
+              <span class="rating-stars"
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ></span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="contact-us">
+        <h3 class="curly-words">Contact Us</h3>
+        <h1>
+          If You Have Any Questions <br />
+          Drop A Message
+        </h1>
+        <ul>
+          <li>
+            <span><i class="fa-solid fa-location-dot"></i></span>
+            <p>
+              Toshkent sh. Yakkasaroy t. Humo k. 1-uy <br />
+              Majlis bo’lib o’tadigan joy nomi: GABRIELLE INTERNATIONAL HOTEL
+              <br />
+              Mo’ljal: Bobur bog’i yonida
+            </p>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-headset"></i></span>
+            <p>
+              +998 90 343-94-00 <br />+998 93 534-94-00 <br />
+              +998 99 990-94-00
+            </p>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-at"></i></span>
+            <p>
+              help@example.com <br />
+              info@example.com
+            </p>
+          </li>
+        </ul>
+        <div class="map-form">
+          <div id="map"></div>
+          <form
+            method="post"
+            action="https://api.sheetmonkey.io/form/v38ZGj1Fj7VmcC5HM39WJy">
+            <input type="text" name="Name" placeholder="Name" />
+            <input
+              type="tel"
+              name="Phone"
+              placeholder="Phone Number"
+              required />
+            <input type="text" name="Subject" placeholder="Subject" />
+            <textarea
+              name="Message"
+              id="message"
+              rows="7"
+              placeholder="Your Message"></textarea>
+            <button type="submit">Submit Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li>
+          <h3>About Us</h3>
+          <hr class="first" width="10px" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+            laborum error est incidunt doloribus ipsum numquam vitae. Lorem,
+            ipsum dolor sit amet consectetur adipisicing elit. Optio, omnis. Vel
+            quidem omnis facilis sapiente, quam similique! Eos nisi iure qui
+            magnam dolore est pariatur. Ut a repudiandae corporis
+            exercitationem!
+          </p>
+        </li>
+      </ul>
+      <hr width="1050px" />
+
+      <div class="socials">
+        <p class="copyright">Copyright @ 2023 KLT Travel all right reserved.</p>
+        <a href="https://www.facebook.com"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.instagram.com"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.twitter.com">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.youtube.com">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+    </footer>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbPC1AUNj_nvTOftu_wu8YX6pYFyJhK-w&callback=initMap"></script>
+  </body>
+</html>
