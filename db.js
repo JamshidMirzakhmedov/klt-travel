@@ -3,57 +3,86 @@ let destinations = [
     imgUrl: "images/places/pexels-haydan-assoendawy-5004002.jpg",
     alt: "Makka",
     price: "300",
-    name: "Makka, Saudi Arabia",
+    name: "Haj va Umra safari",
   },
   {
-    imgUrl: "images/places/tokyo.jpg",
+    imgUrl: "images/places/dubai.jpeg",
     alt: "Tokyo1",
     price: "300",
-    name: "Tokyo, Japan",
+    name: "Dubay, BAA",
   },
   {
-    imgUrl: "images/places/jakarta.jpg",
+    imgUrl: "images/places/maldive.jpeg",
     alt: "Jakarta",
     price: "300",
-    name: "Jakarta, Indonesia",
+    name: "Maldiv orollari",
   },
   {
-    imgUrl: "images/places/bangkok.jpg",
+    imgUrl: "images/places/puket.webp",
     alt: "Bangkok",
     price: "300",
-    name: "Bangkok, Thailand",
+    name: "Puket, Thailand",
   },
   {
-    imgUrl: "images/places/malaysia.jpg",
+    imgUrl: "images/places/turkiye.jpeg",
     alt: "Semporna",
     price: "300",
-    name: "Semporna, Malaysia",
+    name: "Istanbul, Turkiya",
   },
   {
-    imgUrl: "images/places/victoria.jpg",
+    imgUrl: "images/places/sharm.webp",
     alt: "Victoria",
     price: "300",
-    name: "Victoria, Columbia",
+    name: "Sharm al-Shayx, Misr",
   },
 ];
 
 let tourInfos = [
-  `<li>1. ✈️ Aviachiptalar (To'g'ridan to'g'ri Reys)</li>
+  `<li>1. ✈️ Aviachiptalar</li>
     <li>2. 📄 O’zbekiston Umra vizasi</li>
-    <li> 3. 🏨 Mehmonxona 3⭐️ va 5⭐️ </li>
-    <li> 4. 🍱 2 mahal taomlanish </li>
-    <li> 5. ⛩ Kutibolish va kuzatib qo’yish xizmati </li>
+    <li> 3. 🏨 Mehmonxona</li>
+    <li> 4. 🍱  Taomlanish </li>
+    <li> 5. ⛩ Kutib olish va kuzatib qo’yish xizmati </li>
     <li> 6. 🚌 Transport xizmati </li>
     <li> 7. 👳🏽‍♂️ GID xizmati </li>
     <li> 8.💧 Zam-zam suvi (5L) </li>
     <li> 9. 🎽💼📋 Firma nomidan nimcha,sumka, beydjik </li>
     <li> 10. 🕌 Madina va Makka shaharlarida ziyoratlar </li>`,
-  `<li>1. ✈️ Aviachiptalar (To'g'ridan to'g'ri Reys)</li>
-    <li>2. 📄 O’zbekiston Umra vizasi</li>
-    <li> 3. 🏨 Mehmonxona 3⭐️ va 5⭐️ </li>
-    <li> 4. 🍱 2 mahal taomlanish </li>
-    <li> 5. ⛩ Kutibolish va kuzatib qo’yish xizmati </li>
-    <li> 6. 🚌 Transport xizmati </li>
-    <li> 7. 👳🏽‍♂️ GID xizmati </li>
+  `<li>Gid xizmati</li>
+    <li>Viza</li>
+    <li> Lyuks mehmonxonalar </li>
+    <li> Ekskursiyalar </li>
+    <li> Yaponiya tarixi va madaniyati bilan tanishish </li>
+    <li>  Transport xizmati </li>
+    `,
+  `
+    <li> Viza va Aviachiptalar </li>
+    <li> Mehmonxona band qilish </li>
+    <li>  Taom (xohishingizga ko'ra) </li>
+    <li> Transfer </li>
+    `,
+  `
+    <li> Viza va Aviachiptalar </li>
+    <li> Mehmonxona band qilish </li>
+    <li>  Taom (xohishingizga ko'ra) </li>
+    <li> Transfer </li>
+    `,
+  `
+    <li> Viza va Aviachiptalar </li>
+    <li> Mehmonxona band qilish </li>
+    <li>  Taom (xohishingizga ko'ra) </li>
+    <li> Transfer </li>
+    `,
+  `
+    <li> Viza va Aviachiptalar </li>
+    <li> Mehmonxona band qilish </li>
+    <li>  Taom (xohishingizga ko'ra) </li>
+    <li> Transfer </li>
+    `,
+  `
+    <li> Viza va Aviachiptalar </li>
+    <li> Mehmonxona band qilish </li>
+    <li>  Taom (xohishingizga ko'ra) </li>
+    <li> Transfer </li>
     `,
 ];

@@ -62,7 +62,7 @@ header .fixed {
 }
 .curly-words {
   font-family: "Arizonia", serif;
-  color: rgb(133, 228, 109);
+  color: crimson;
   word-spacing: 5px;
   font-size: 2rem;
   font-weight: normal;
@@ -148,6 +148,7 @@ header .fixed {
 }
 .choose-us-info li {
   display: flex;
+  margin: 2.5rem;
 }
 
 .choose-us-info span {
@@ -155,7 +156,13 @@ header .fixed {
   margin-right: 3.7rem;
   padding: 1rem;
   font-size: 1.5rem;
+  color: #fff;
+  background-color: crimson;
 }
+.choose-us-info span img {
+  width: 3rem;
+}
+
 .choose-us-info h3 {
   margin: 0;
 }
@@ -280,6 +287,9 @@ span {
   border-radius: 60%;
   color: #fff;
   font-size: 30px;
+}
+#services .card i:last-of-type {
+  font-size: 45px;
 }
 #services .card h3 {
   margin-top: 55px;
@@ -518,6 +528,7 @@ span {
 }
 #contact-us h1 {
   font-size: 40px;
+  margin-bottom: 60px;
 }
 #contact-us ul {
   display: flex;
