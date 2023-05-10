@@ -39,12 +39,8 @@
           <li><a href="#home" class="fixed">Bosh Sahifa</a></li>
           <li><a href="#top-deals" class="fixed">Sayohat To'plamlar </a></li>
           <li><a href="#services" class="fixed">Xizmatlar</a></li>
-          <li><a href="#tour-gallery" class="fixed">Galleriya</a></li>
           <li><a href="#contact-us" class="fixed">Bog'lanish</a></li>
-          <select
-            name="language-selecet"
-            id="language-select"
-            onclick="setLanguagePreference(this.value);">
+          <select name="language-selecet" class="language-select">
             <option value="0">Tilni tanlash</option>
             <option value="index.html">O'zbek</option>
             <option value="index-ru.html">Русский </option>
@@ -60,9 +56,8 @@
           <li><a href="#home" class="fixed">Bosh Sahifa</a></li>
           <li><a href="#top-deals" class="fixed">Sayohat To'plamlar </a></li>
           <li><a href="#services" class="fixed">Xizmatlar</a></li>
-          <li><a href="#tour-gallery" class="fixed">Galleriya</a></li>
           <li><a href="#contact-us" class="fixed">Bog'lanish</a></li>
-          <select name="language-selecet" id="language-select">
+          <select name="language-selecet" class="language-select">
             <option value="0">Tilni tanlash</option>
             <option value="index.html">O'zbek</option>
             <option value="index-ru.html">Русский </option>
@@ -90,7 +85,7 @@
               <br />
               <i class="fa-solid fa-arrow-down down-arrow"></i>
             </p>
-            <a href="tel:+998903439400" class="call-btn">Aloqa uchun ➡</a>
+            <a href="tel:+998931224746" class="call-btn">Aloqa uchun ➡</a>
           </div>
         </div>
         <div class="slide fade">
@@ -109,7 +104,7 @@
               <br />
               <i class="fa-solid fa-arrow-down down-arrow"></i>
             </p>
-            <a href="tel:+998903439400" class="call-btn">Aloqa uchun ➡</a>
+            <a href="tel:+998931224746" class="call-btn">Aloqa uchun ➡</a>
           </div>
         </div>
       </section>
@@ -151,7 +146,7 @@
             </li>
             <li>
               <div>
-                <span><i class="fa-solid fa-check"></i></span>
+                <span><i class="fa-solid fa-shield-halved"></i></span>
               </div>
               <div class="txt">
                 <h3>Ishonchli va Halol xizmat</h3>
@@ -199,9 +194,12 @@
             >
           </li>
           <li class="card">
-            <span><i class="fa-solid fa-circle-plus"></i></span>
+            <span><i class="fa-solid fa-hand-holding-medical"></i></span>
             <h3>Tibbiy sug'urta</h3>
-            <p>Lorem ipsum dolor sit amet consetetur sadipscing</p>
+            <p
+              >Sizning sog’ligingiz ishonchli qo’llarda bo’lishini
+              taminlaymiz!</p
+            >
           </li>
         </ul>
       </section>
@@ -222,7 +220,7 @@
         <ul class="statistics-content">
           <li>
             <span><i class="fa-solid fa-users"></i></span>
-            <h1 id="nbr">324</h1>
+            <h1 class="nbr" data-count="324">324</h1>
             <h3 class="curly-words">
               Baxtli mijozlar
 
@@ -231,7 +229,7 @@
           </li>
           <li>
             <span><i class="fa-solid fa-plane"></i></span>
-            <h1 id="nbr">236</h1>
+            <h1 class="nbr" data-count="236">236</h1>
             <h3 class="curly-words">
               Sayyohatlar
               <span class="dot"><i class="fa-solid fa-circle"></i></span>
@@ -240,14 +238,14 @@
 
           <li>
             <span><i class="fa-solid fa-headset"></i></span>
-            <h1 id="nbr">198</h1>
+            <h1 class="nbr" data-count="198">198</h1>
             <h3 class="curly-words">
               Yordamlashilgan holatlar
               <span class="dot"><i class="fa-solid fa-circle"></i></span>
             </h3> </li
           ><li>
             <span><i class="fa-solid fa-handshake"></i></span>
-            <h1 id="nbr">3</h1>
+            <h1 class="nbr" data-count="3">3</h1>
             <h3 class="curly-words">
               Hamkorlar
               <span class="dot"><i class="fa-solid fa-circle"></i></span>
@@ -264,15 +262,19 @@
           <ul class="views-container">
             <li class="views">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque consequuntur ipsa quisquam exercitationem molestiae
+                Ushbu sayohat mening kutganimdan oshib ketdi! Marshrut yaxshi
+                rejalashtirilgan va biz juda ko'p ajoyib joylarni ko'rishdik.
+                Ekskursiya ajoyib va haqiqatan ham vaqtni o'ziga xos o'tkazdik.
+                Men ushbu kompaniya bilan boshqa turni bron qilishni kutib
+                qolaman.
               </p>
               <div class="user-img">
                 <img
-                  src="/images/users/user1-removebg-preview.png"
-                  alt="user photo" />
+                  src="/images/users/user1.png"
+                  class="userfoto1"
+                  alt="user  photo" />
               </div>
-              <h2>Paula</h2>
+              <h2>Muqqadas Abdullayeva</h2>
               <span class="rating-stars"
                 ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
                 ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -281,15 +283,16 @@
             </li>
             <li class="views">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque consequuntur ipsa quisquam exercitationem molestiae
+                Ekskursiya ajoyib bo'ldi! Bizning ekskursiya gidimiz biz tashrif
+                buyurgan joylar haqida juda bilimdon va g'ayratli ekan. Menga
+                mintaqaning tarixi va madaniyati bilan tanishish yoqdi.
               </p>
               <div class="user-img">
                 <img
                   src="/images/users/user2-removebg-preview.png"
                   alt="user photo" />
               </div>
-              <h2>John</h2>
+              <h2>Rufat Aliev</h2>
               <span class="rating-stars"
                 ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
                 ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -298,15 +301,17 @@
             </li>
             <li class="views active">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque consequuntur ipsa quisquam exercitationem molestiae
+                Men safarda ajoyib vaqt o'tkazdim. Ekskursiya boshlovchisi juda
+                samimiy va men kichik guruh hajmini qadrladim. Butun tajriba
+                juda moslashtirilgan va men ushbu turni noyob va haqiqiy sayohat
+                tajribasini izlayotgan har bir kishiga tavsiya qilaman.
               </p>
               <div class="user-img">
                 <img
                   src="/images/users/user3-removebg-preview.png"
                   alt="user photo" />
               </div>
-              <h2>Anna</h2>
+              <h2>Irina Sokolova </h2>
               <span class="rating-stars"
                 ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
                 ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -362,15 +367,16 @@
     <footer>
       <ul>
         <li>
-          <h3>About Us</h3>
+          <h3>Biz haqimizda</h3>
           <hr class="first" width="10px" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-            laborum error est incidunt doloribus ipsum numquam vitae. Lorem,
-            ipsum dolor sit amet consectetur adipisicing elit. Optio, omnis. Vel
-            quidem omnis facilis sapiente, quam similique! Eos nisi iure qui
-            magnam dolore est pariatur. Ut a repudiandae corporis
-            exercitationem!
+            Opal Travel - bu dunyoning turli joylariga qiziqarli va ajoyib
+            sayohatlar uyushtiruvchi sayyohlik kompaniyasi. Katta tajribaga ega
+            va sizning sayohatingizni mukammal rejalashtirishingizga yordam
+            beradi. Turli xil ekskursiyalarni taklif qilamiz va sizga atrofni
+            ko'rsatish uchun bilimdon gidlar mavjud. Shunchaki biz bilan band
+            qiling va biz hamma narsaga sharoit yaratib beramiz, shunda siz
+            sarguzashtingizda ajoyib vaqt o'tkazishingiz mumkin!
           </p>
         </li>
       </ul>
@@ -378,18 +384,12 @@
 
       <div class="socials">
         <p class="copyright">Copyright @ 2023 KLT Travel all right reserved.</p>
-        <a href="https://www.facebook.com"
-          ><i class="fa-brands fa-facebook"></i
+        <a href="https://t.me/OPAL_TRAVELL"
+          ><i class="fa-brands fa-telegram"></i
         ></a>
-        <a href="https://www.instagram.com"
+        <a href="https://instagram.com/opal_travell?igshid=NTc4MTIwNjQ2YQ=="
           ><i class="fa-brands fa-instagram"></i
         ></a>
-        <a href="https://www.twitter.com">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a href="https://www.youtube.com">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
       </div>
     </footer>
     <script

@@ -74,7 +74,7 @@ header .fixed {
   margin: 10px 0;
 }
 
-#language-select {
+.language-select {
   background-color: crimson;
   color: #fff;
   font-weight: bold;
@@ -250,7 +250,7 @@ header .fixed {
 .close-travel {
   position: absolute;
   cursor: pointer;
-  color: rgb(214, 95, 119);
+  color: crimson;
   font-size: 30px;
   top: 0;
   right: 10px;
@@ -282,7 +282,7 @@ header .fixed {
 }
 
 span {
-  background-color: rgb(217, 153, 63);
+  background-color: crimson;
   padding: 25px;
   border-radius: 60%;
   color: #fff;
@@ -435,18 +435,34 @@ span {
 }
 .statistics-content li span {
   background-color: transparent;
-  color: black;
+  color: crimson;
 }
 .statistics-content li h1 {
-  color: rgb(214, 95, 119);
+  color: rgb(31, 29, 29);
   margin-top: 0px;
   margin-bottom: 10px;
   font-size: 50px;
   letter-spacing: 6px;
   font-weight: 600;
+  animation: count-up 2s ease-out;
 }
+@keyframes count-up {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.userfoto1 {
+  width: 70px !important;
+}
+
 .statistics-content li .curly-words {
-  color: rgb(32, 29, 29);
+  color: crimson;
   margin-top: 10px;
 }
 .dot {
@@ -457,25 +473,11 @@ span {
 .dot i {
   color: rgb(214, 95, 119);
 }
-.partners {
-  height: 18rem;
-  overflow: hidden;
-}
-.partners ul {
-  height: 100%;
-  background-color: rgb(232, 236, 231);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-.partners li {
-  border: solid rgb(141, 130, 130) 1px;
-}
+
 #testimonials {
   height: 100%;
   /* width: 100%; */
-  background-image: url("/images/places/maldives-island.jpg");
+  background-image: url("/images/places/maldive.jpeg");
   min-height: 70vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -523,6 +525,7 @@ span {
   font-size: 15px;
   color: rgb(165, 237, 22);
 }
+
 #contact-us {
   text-align: center;
 }
@@ -532,7 +535,7 @@ span {
 }
 #contact-us ul {
   display: flex;
-  gap: 120px;
+  gap: 80px;
   justify-content: center;
 }
 #contact-us li p {
@@ -605,7 +608,7 @@ form button {
   position: absolute;
   left: 54.9%;
   cursor: pointer;
-  background-color: rgb(217, 153, 63);
+  background-color: crimson;
   color: #fff;
   font-size: 17px;
   border: none;
@@ -623,7 +626,7 @@ footer {
 }
 hr.first {
   width: 200px !important;
-  border: 3px solid rgb(217, 153, 63);
+  border: 3px solid crimson;
   margin-left: 0px;
 }
 footer ul {

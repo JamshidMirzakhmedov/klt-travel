@@ -1,7 +1,6 @@
 const navbar = document.querySelector("header");
 const navLists = document.querySelectorAll("header li a");
 const cards = document.querySelector(".travel-package-cards");
-const photos = document.querySelector(".photos");
 window.onscroll = () => {
   if (window.scrollY > 10) {
     navbar.classList.add("nav-active");
@@ -12,28 +11,22 @@ window.onscroll = () => {
 
 // language select
 
-// const userLang = navigator.language || navigator.userLanguage;
-// if (userLang.startsWith("en")) {
-//   window.location.href = "index.html";
-// } else if (userLang.startsWith("ru")) {
-//   window.location.href = "index-ru.html";
-// }
-
-// localStorage.setItem("userLang", userLang);
-
-const languageSelect = document.getElementById("language-select");
+const languageSelects = document.getElementsByClassName("language-select");
 
 // Set the default language based on the user's browser language
-const userLang = navigator.language || navigator.userLanguage;
-if (userLang.startsWith("ru")) {
-  languageSelect.value = "index-ru.html";
-}
 
 // Listen for changes to the language selector
-languageSelect.addEventListener("change", function (event) {
-  const newUrl = event.target.value;
-  window.location.href = newUrl;
-});
+
+for (let i = 0; i < languageSelects.length; i++) {
+  languageSelects[i].addEventListener("change", (event) => {
+    const newUrl = event.target.value;
+    window.location.href = newUrl;
+    const userLang = navigator.language || navigator.userLanguage;
+    if (userLang.startsWith("ru")) {
+      languageSelects[i].value = "index-ru.html";
+    }
+  });
+}
 
 let slideIndex = 0;
 showSlides();
@@ -52,18 +45,27 @@ function showSlides() {
   slides[slideIndex - 1].style.display = "block";
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
+const pageLang = document.documentElement.lang;
 
-for (let i = 0; i < destinations.length; i++) {
-  const card = document.createElement("li");
-  card.classList.add("travel-package-card");
-  card.innerHTML = `<div class="card-img">
-    <img src=${destinations[i].imgUrl} alt=${destinations[i].alt} />
-  </div>
-  
-  <h4 class="location-name">
-    <i class="fa-solid fa-location-dot"></i> ${destinations[i].name}
-  </h4>`;
-  cards.append(card);
+if (pageLang.startsWith("ru")) {
+  showDestinationCard(destinationsRu);
+} else {
+  showDestinationCard(destinations);
+}
+
+function showDestinationCard(data) {
+  for (let i = 0; i < data.length; i++) {
+    const card = document.createElement("li");
+    card.classList.add("travel-package-card");
+    card.innerHTML = `<div class="card-img">
+      <img src=${data[i].imgUrl} alt=${data[i].alt} />
+    </div>
+    
+    <h4 class="location-name">
+      <i class="fa-solid fa-location-dot"></i> ${data[i].name}
+    </h4>`;
+    cards.append(card);
+  }
 }
 
 const travelPackageCards = document.querySelectorAll(".travel-package-card");
@@ -79,7 +81,10 @@ function showPackageModel(btn, i) {
     travelModel.classList.remove("hidden");
     travelModelOverlay.classList.remove("hidden");
     document.body.style.overflow = "hidden";
-    travelModelContent.innerHTML = `${tourInfos[i]}`;
+
+    travelModelContent.innerHTML = ` ${
+      pageLang.startsWith("ru") ? tourInfosRu[i] : tourInfos[i]
+    }`;
   });
 }
 closeTravelModelBtn.addEventListener("click", closeTravelModel);
@@ -90,69 +95,27 @@ function closeTravelModel() {
   document.body.style.overflow = "auto";
 }
 
-for (let i = 0; i < destinations.length; i++) {
-  const photo = document.createElement("li");
-  photo.classList.add("photo");
-  photo.innerHTML = `
-  <img
-  src=${destinations[i].imgUrl}
-  alt=${destinations[i].alt}
-/>
-<span><i class="fa-solid fa-plus"></i></span>
-<h3 class="photo-name">${destinations[i].name}</h3>`;
-  photos.append(photo);
-}
+const counters = document.querySelectorAll(".nbr");
 
-// ------PHOTO MODAL
+counters.forEach((counter) => {
+  const target = +counter.getAttribute("data-count");
+  const duration = 2000; // animation duration in ms
+  const increment = (target / duration) * 10; // increment value per frame (10ms)
+  let current = 0;
 
-const openCardImageBtns = document.querySelectorAll(".photos li span");
-const modal = document.querySelector("#tour-gallery .modal");
-const modalPhoto = document.getElementById("modal-photo");
-const closeModalBtn = document.querySelector(".close-modal");
-openCardImageBtns.forEach(showPhotoModal);
-function showPhotoModal(btn, i) {
-  btn.addEventListener("click", function () {
-    modal.style.display = "block";
-    document.body.style.overflow = "hidden";
-    modalPhoto.src = destinations[i].imgUrl;
-  });
-}
+  const updateCounter = () => {
+    current += increment;
+    counter.textContent = Math.floor(current);
 
-closeModalBtn.addEventListener("click", closeModal);
-function closeModal() {
-  modal.style.display = "none";
-  document.body.style.overflow = "auto";
-}
+    if (current < target) {
+      requestAnimationFrame(updateCounter);
+    } else {
+      counter.textContent = target;
+    }
+  };
 
-var speed = 1;
-
-/* Call this function with a string containing the ID name to
- * the element containing the number you want to do a count animation on.*/
-function incEltNbr(id) {
-  elt = document.getElementById(id);
-  endNbr = Number(document.getElementById(id).innerHTML);
-  incNbrRec(0, endNbr, elt);
-}
-
-/*A recursive function to increase the number.*/
-function incNbrRec(i, endNbr, elt) {
-  if (i <= endNbr) {
-    elt.innerHTML = i;
-    setTimeout(function () {
-      //Delay a bit before calling the function again.
-      incNbrRec(i + 1, endNbr, elt);
-    }, speed);
-  }
-}
-
-/*Function called on button click*/
-function incNbr() {
-  incEltNbr("nbr");
-}
-
-incEltNbr(
-  "nbr"
-); /*Call this funtion with the ID-name for that element to increase the number within*/
+  updateCounter();
+});
 
 let viewIndex = 0;
 showviews();
