@@ -136,15 +136,15 @@ function showviews() {
 
 let map;
 let Tashkent = { lat: 41.27755756336031, lng: 69.21373823982567 };
-const KLT = { lat: 41.275455143232215, lng: 69.21487669539822 };
+const Opal = { lat: 41.27105752077002, lng: 69.26131189772607 };
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: Tashkent,
     zoom: 15,
   });
   const marker = new google.maps.Marker({
-    position: KLT,
-    label: "KLT Travel Agency",
+    position: Opal,
+    label: "Opal Travel Agency",
     // icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/info-i_maps.png",
     map: map,
   });
