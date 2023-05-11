@@ -171,3 +171,8 @@ function closeMenuBar(btn) {
 closeBar.addEventListener("click", () => {
   menu.classList.remove("open");
 });
+const now = new Date();
+const currentYear = now.getFullYear();
+const year = document.querySelector(".currentYear");
+
+year.textContent = currentYear;

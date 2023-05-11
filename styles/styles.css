@@ -281,7 +281,7 @@ header .fixed {
   background-color: rgba(241, 248, 246, 0.438);
 }
 
-span {
+main span {
   background-color: crimson;
   padding: 25px;
   border-radius: 60%;
@@ -542,7 +542,7 @@ span {
   color: black;
   display: inline-block;
 }
-#contact-us span {
+main #contact-us span {
   text-align: center;
   padding: 20px 25px;
   font-size: 25px;
