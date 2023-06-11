@@ -415,7 +415,7 @@ main span {
 .statistics-content {
   display: flex;
   background-image: url("/images/travel-concept-with-landmarks.jpg");
-  min-height: 500px;
+  height: 500px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
